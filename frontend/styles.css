@@ -1,3 +1,89 @@
-.titulo{
-        color:brown
+:root {
+        --claro: #f2f2f2;
+        --oscuro: #151517;
+        --primario: #343057;
+        --secundario: #a8f044;
+        --terciario: #a4a4c7;
+}
+
+html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+}
+
+*, *:before, *:after {
+        box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Recursive", sans-serif;
+  background-color: var(--claro);
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* contenedor */
+.contenedor {
+  width: 90rem;
+  height: 75rem;
+  max-width: 1000px;
+  background-color: #1f2937;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+
+  display: flex;               /* Distribuir el contenido horizontalmente */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Título */
+.titulo {
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+}
+
+/* Botones en columna */
+.grupo-boton {
+  display: flex;
+/*  justify-content: space-between; */
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grupo-boton button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.grupo-boton button:hover {
+  background-color: #1e40af;
+}
+
+
+/* Mapa (si lo usas) */
+#map {
+  flex: 1;
+  width: 100%;
+  background-color: #2d3748;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
