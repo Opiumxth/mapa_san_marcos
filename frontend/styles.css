@@ -31,8 +31,8 @@ body {
 /* contenedor */
 .contenedor {
   width: 90rem;
-  height: 75rem;
-  max-width: 1000px;
+  height: 100%;
+  max-width: 700px;
   background-color: #1f2937;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
@@ -61,7 +61,32 @@ body {
   gap: 12px;
 }
 
-.grupo-boton button {
+.contenedor-seleecion {
+  display: flex;
+  gap: 8px;
+}
+
+.contenedor-seleecion button {
+  flex-shrink: 0;
+}
+
+.btn-cancelar {
+  padding: 10px;
+  background-color: #dc2626; 
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start; 
+  display: none; 
+}
+
+.btn-cancelar:hover {
+  background-color: #b91c1c;
+}
+
+.grupo-boton .seleccion {
   flex: 1;
   padding: 12px;
   font-size: 1.4rem;
@@ -74,10 +99,26 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.grupo-boton button:hover {
+.grupo-boton .seleccion:hover {
   background-color: #1e40af;
 }
 
+.borrar {
+    flex: 1;
+  padding: 12px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  background-color: #e76c1a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.grupo-boton .borrar:hover {
+  background-color: #ae4805;
+}
 
 /* Mapa */#map {
   flex: 1;

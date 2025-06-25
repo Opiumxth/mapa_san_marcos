@@ -13,10 +13,18 @@
                 <div id = "map"></div>
 
                 <div class = "grupo-boton">
-                        <button>seleccionar ubicacion inicial</button>
-                        <button>seleccionar ubicacion final</button>
-                        <button>determinar ruta</button>
+                        <div class="contenedor-seleecion">
+                                <button class="seleccion" id="btn-inicial">seleccionar ubicacion inicial</button>
+                                <button class="btn-cancelar" id="btn-cancel-i">✖ Cancelar Selección</button>
+                        </div>
+                        <div class="contenedor-seleecion">
+                                <button class="seleccion" id="btn-final">seleccionar ubicacion final</button>
+                                <button class="btn-cancelar" id="btn-cancel-f">✖ Cancelar Selección</button>
+                        </div>
+                        <button class="seleccion" id="btn-ruta">determinar ruta</button>
+                        <button class="borrar" id = "btn-borrar"> borrar selecciones</button>
                 </div>
         </div>
+        <script src="./app.js"></script>
 </body>
 </html>
