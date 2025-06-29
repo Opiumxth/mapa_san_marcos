@@ -1,18 +1,18 @@
 :root {
-        --claro: #f2f2f2;
-        --oscuro: #151517;
-        --primario: #343057;
-        --secundario: #a8f044;
-        --terciario: #a4a4c7;
+  --claro: #f2f2f2;
+  --oscuro: #151517;
+  --primario: #343057;
+  --secundario: #a8f044;
+  --terciario: #a4a4c7;
 }
 
 html {
-        font-size: 62.5%;
-        box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-        box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -20,78 +20,65 @@ body {
   font-family: "Recursive", sans-serif;
   background-color: var(--claro);
   margin: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-
-/* contenedor */
 .contenedor {
   width: 90rem;
-  height: 100%;
-  max-width: 700px;
+  aspect-ratio: 4 / 3;
   background-color: #1f2937;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   padding: 20px;
 
-  display: flex;               /* Distribuir el contenido horizontalmente */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Titulo */
 .titulo {
-        margin-bottom: 20px;
-        font-size: 2.4rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: white;
-        text-align: center;
-}
-
-/* Botones en columna */
-.grupo-boton {
-  display: flex;
-/*  justify-content: space-between; */
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contenedor-seleecion {
-  display: flex;
-  gap: 8px;
-}
-
-.contenedor-seleecion button {
-  flex-shrink: 0;
-}
-
-.btn-cancelar {
-  padding: 10px;
-  background-color: #dc2626; 
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
   color: white;
-  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Inputs */
+.campos {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.campos input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.6rem;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
-  align-self: flex-start; 
-  display: none; 
+  outline: none;
 }
 
-.btn-cancelar:hover {
-  background-color: #b91c1c;
+.campos input::placeholder {
+  color: #a0aec0;
 }
 
-.grupo-boton .seleccion {
+.grupo-boton {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.grupo-boton button {
   flex: 1;
   padding: 12px;
   font-size: 1.4rem;
   text-transform: capitalize;
-  background-color: #2563eb;
   border: none;
   border-radius: 8px;
   color: white;
@@ -99,31 +86,27 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.grupo-boton .seleccion:hover {
+#btn-ruta {
+  background-color: #2563eb;
+}
+
+#btn-ruta:hover {
   background-color: #1e40af;
 }
 
-.borrar {
-    flex: 1;
-  padding: 12px;
-  font-size: 1.4rem;
-  text-transform: capitalize;
+#btn-borrar {
   background-color: #e76c1a;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.grupo-boton .borrar:hover {
+#btn-borrar:hover {
   background-color: #ae4805;
 }
 
-/* Mapa */#map {
-  flex: 1;
+/* Imagen */
+#img-ruta {
   width: 100%;
-  background-color: #2d3748;
+  height: 100%;
+  object-fit: contain;
   border-radius: 10px;
-  margin-bottom: 20px;
+  border: 2px solid white;
 }

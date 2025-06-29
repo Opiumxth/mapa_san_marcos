@@ -1,2 +1,4 @@
 # Entorno virtual
 venv/
+__pycache__/
+frontend/static/ruta.png
