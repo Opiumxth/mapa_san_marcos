@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de la Ruta</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 900px; margin: auto; }
+        h1 { color: #0056b3; text-align: center; }
+        h2 { color: #0056b3; margin-top: 20px; }
+        p { font-size: 1.1em; line-height: 1.6; }
+        img { max-width: 100%; height: auto; display: block; margin: 20px auto; border: 1px solid #ddd; border-radius: 4px; }
+        .error { color: red; font-weight: bold; text-align: center; }
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado de la Ruta</h1>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <h2>Ruta Encontrada:</h2>
+            <p><strong>Camino:</strong> {{ route_path }}</p>
+            <p><strong>Distancia Total:</strong> {{ route_distance }}</p>
+            <img src="data:image/png;base64,{{ route_img }}" alt="Ruta Encontrada">
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="back-button">Volver al Inicio</a>
+    </div>
+</body>
+</html>

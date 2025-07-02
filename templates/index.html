@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa San Marcos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <div class="contenedor">
+        <h1 class="titulo">Mapa San Marcos</h1>
+
+        <div id="map">
+            <img id="img-ruta" src="" alt="Grafo del mapa" />
+        </div>
+
+        <div class="grupo-selectores">
+            <div>
+                <label for="nodo-inicio">Nodo de inicio:</label>
+                <select id="nodo-inicio" class="input-select">
+                    </select>
+            </div>
+            <div>
+                <label for="nodo-fin">Nodo de destino:</label>
+                <select id="nodo-fin" class="input-select">
+                    </select>
+            </div>
+        </div>
+
+        <div class="grupo-boton">
+            <button class="seleccion" id="btn-ruta">Determinar Ruta</button>
+            <button class="borrar" id="btn-borrar">Borrar Selecciones</button>
+            <button class="generar-nuevo" id="btn-generar-nuevo">Generar Nuevo Grafo</button>
+        </div>
+
+        <div id="resultado-ruta" class="resultado">
+            <p><strong>Camino:</strong> <span id="camino-resultado">N/A</span></p>
+            <p><strong>Distancia:</strong> <span id="distancia-resultado">N/A</span></p>
+        </div>
+
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

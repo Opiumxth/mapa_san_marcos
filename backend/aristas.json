@@ -1,6 +1,0 @@
-[
-    { "origen": "A", "destino": "B", "peso": 2.83 },
-    { "origen": "B", "destino": "C", "peso": 2.83 },
-    { "origen": "C", "destino": "D", "peso": 2.83 },
-    { "origen": "A", "destino": "C", "peso": 4.0 }
-]
